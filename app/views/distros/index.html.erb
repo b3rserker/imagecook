@@ -1,0 +1,31 @@
+<h1>Cloud image cooker</h1>
+<h2>Available distros</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Info</th>
+      <th>Valid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distros.each do |distro| %>
+      <tr>
+        <td><%= distro.name %></td>
+        <td><%= distro.info %></td>
+        <td><%= distro.valid %></td>
+        <td><%= link_to 'Show', direct_distro_path(distro.name) %></td>
+        <td><%= link_to 'Edit', edit_distro_path(distro) %></td>
+        <td><%= link_to 'Destroy', distro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distro', new_distro_path %>

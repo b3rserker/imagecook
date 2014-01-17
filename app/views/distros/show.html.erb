@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @distro.name %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @distro.info %>
+</p>
+
+<p>
+  <strong>Valid:</strong>
+  <%= @distro.valid %>
+</p>
+
+<%= link_to 'Edit', edit_distro_path(@distro) %> |
+<%= link_to 'Back', distros_path %>
